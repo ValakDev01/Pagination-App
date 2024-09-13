@@ -1,19 +1,24 @@
-import React from 'react';
+import "./Posts.css"; // Import CSS styles
 
-const Posts = ({ posts, loading }) => {
-  if (loading) {
-    return <h2>Loading...</h2>;
-  }
+function Posts({ posts, loading }) {
+	if (loading) {
+		return <h2>Loading...</h2>;
+	}
 
-  return (
-    <ul className='list-group mb-4'>
-      {posts.map(post => (
-        <li key={post.id} className='list-group-item'>
-          {post.title}
-        </li>
-      ))}
-    </ul>
-  );
-};
+	// Dynamically generated content
+
+	return (
+		<div className="posts-container">
+			<h1 className="posts-header">Posts</h1>
+			<ul className="posts-list">
+				{posts.map((post) => (
+					<li key={post.id} className="post-item">
+						{post.id}. {post.title}
+					</li>
+				))}
+			</ul>
+		</div>
+	);
+}
 
 export default Posts;

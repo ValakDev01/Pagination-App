@@ -1,0 +1,36 @@
+/* Container for pagination */
+.pagination-nav {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+/* Pagination list */
+.pagination-list {
+	list-style-type: none;
+	padding: 0;
+	display: flex;
+	gap: 10px;
+}
+
+/* Pagination list item */
+.pagination-item {
+	display: inline;
+}
+
+/* Pagination link */
+.pagination-link {
+	display: inline-block;
+	padding: 10px 15px;
+	text-decoration: none;
+	color: #007bff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect on pagination links */
+.pagination-link:hover {
+	background-color: #007bff;
+	color: white;
+}
